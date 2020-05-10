@@ -1,0 +1,89 @@
+    package com.example.app_emphie;
+
+
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Empathies")
+
+public class Empathy {
+
+    @PrimaryKey (autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "EmpathieID")
+    private int mId;
+
+    @Nullable
+    @ColumnInfo  (name = "EmpathieType")
+    private String mType;
+
+    @ColumnInfo  (name = "EmpathieAttitude")
+    private String mAttitude;
+
+    @ColumnInfo  (name = "EmpathieEvaluation")
+    private int mEvaluation;
+
+    @NonNull
+    @ColumnInfo  (name = "EmpathieCreationDate")
+    private String mCreationDate;
+
+
+    private int Evaluation;
+    private String eCreationDate;
+
+    public Empathy(@Nullable String mType, String mAttitude, int mEvaluation, @NonNull String mCreationDate) {
+        this.mType = mType;
+        this.mAttitude = mAttitude;
+        this.mEvaluation = mEvaluation;
+        this.mCreationDate = mCreationDate;
+    }
+
+
+
+    public int getmId() {
+        return mId;
+    }
+
+    public void setmId(int mId) {
+        this.mId = mId;
+    }
+
+    public String getmType() {
+        return mType;
+    }
+
+    public void setmType(String mType) {
+        this.mType = mType;
+    }
+
+    public String getmAttitude() {
+        return mAttitude;
+    }
+
+    public void setmAttitude(String mAttitude) {
+        this.mAttitude = mAttitude;
+    }
+
+    public int getmEvaluation() {
+        return mEvaluation;
+    }
+
+    public void setmEvaluation(int mEvaluation) {
+        this.mEvaluation = mEvaluation;
+    }
+
+    public String getmCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setmCreationDate(String mCreationDate) {
+        this.mCreationDate = mCreationDate;
+    }
+
+
+
+        }
